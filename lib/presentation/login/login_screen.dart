@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/presentation/localization/localization.dart';
 import 'package:get/get.dart';
 
 import '../base/base_screen.dart';
@@ -39,7 +40,7 @@ class _UsernameInput extends StatelessWidget {
         key: const Key('loginForm_usernameInput_textField'),
         onChanged: (username) => controller.changeUsername(username),
         decoration: InputDecoration(
-          labelText: 'username',
+          labelText: AppLocalization.of(context).auth_lbl_user_name,
           errorText: controller.username.value.errorText,
         ),
       );
@@ -57,7 +58,7 @@ class _PasswordInput extends StatelessWidget {
         onChanged: (password) => controller.changePassword(password),
         obscureText: true,
         decoration: InputDecoration(
-          labelText: 'password',
+          labelText: AppLocalization.of(context).auth_lbl_password,
           errorText: controller.password.value.errorText,
         ),
       );
@@ -77,7 +78,7 @@ class _LoginButton extends StatelessWidget {
                 controller.startLogin();
               }
             : null,
-        child: const Text('Login'),
+        child: Text(AppLocalization.of(context).auth_btn_login),
       ),
     );
   }

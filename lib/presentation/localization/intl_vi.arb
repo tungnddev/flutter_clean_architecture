@@ -1,0 +1,11 @@
+{
+  "dialog_message_done_button": "Xong",
+  "dialog_message_title": "Chú ý",
+
+  "auth_lbl_user_name": "Tên đăng nhập",
+  "auth_lbl_password": "Mật khẩu",
+  "auth_btn_login": "Đăng nhập",
+
+  "product_item_name": "Tên",
+  "product_item_id": "Id"
+}
